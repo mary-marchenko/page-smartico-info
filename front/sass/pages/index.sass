@@ -1,0 +1,366 @@
+@import "../var"
+
+.hide
+  display: none !important
+
+body.light
+  background: $bg-black
+
+body
+  overscroll-behavior: none
+  -webkit-tap-highlight-color: transparent
+  background: $bg-black
+  img
+    max-width: 100%
+    height: auto
+  & > *
+    font-family: inherit
+
+.fav-page
+  background: $bg-black
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden
+  gap: 45px
+  .cont
+    width: 1366px
+    margin: 0 auto
+  .btn
+    min-width: 90px
+    height: 36px
+    max-width: max-content
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $green
+    border-radius: 6px
+    color: $blue
+    text-transform: uppercase
+    font-family: $font-robotoCondensed-bold
+    font-size: 14px
+    transition: background .3s ease-in-out
+    &:hover,
+    &:active
+      background-color: $green-hover
+  .welcome
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 1366px
+    height: 340px
+    margin: 0 auto
+    position: relative
+    background: url("../img/bg-title-desk.jpg") no-repeat 0 0/cover
+    background-size: 100% 100%
+    @media screen and (max-width: 1050px)
+      background: url("../img/bg-title-tab.jpg") no-repeat 0 0/cover
+    @media screen and (max-width: 600px)
+      background: url("../img/bg-title-mob.jpg") no-repeat 0 0/cover
+    &__content
+      display: flex
+      position: relative
+      z-index: 2
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__title
+      color: $white
+      font-family: $font-favbetDisplay
+      font-size: 40px
+      text-transform: uppercase
+      margin-bottom: 40px
+    &__sem
+      width: 475px
+      height: auto
+      top: 0
+      right: 110px
+      position: absolute
+      z-index: 1
+      animation: zigzagDrop 2s ease-out forwards
+      &.levitation
+        animation: floatUpDown 2s ease-in-out infinite
+        animation-delay: 0s
+
+  .widget
+    margin: -45px auto 0
+    background: url("../img/widget.png") no-repeat 50% 50%/cover
+    background-size: 100% 100%
+    text-align: center
+    width: 705px
+    height: 88px
+    padding: 30px 0 8px
+    @media screen and (max-width: 600px)
+      background: url("../img/widget-mob.png") no-repeat 50% 50%/cover
+    p
+      margin: 0 auto
+      font-family: $font-favbetText-regular
+      font-size: 18px
+      color: $white
+      max-width: 648px
+
+  .info
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    background: url("../img/bg-bottom-desk.png") no-repeat -47px 50px/cover
+    background-size: 100% 100%
+      //background-size: auto 680px
+    @media screen and (max-width: 1050px)
+      background: url("../img/bg-bottom-tab.png") no-repeat 0 0/cover
+    @media screen and (max-width: 600px)
+      background: url("../img/bg-bottom-mob.png") no-repeat 0 0/cover
+    &__title
+      width: 100%
+      position: relative
+      display: flex
+      justify-content: center
+      &-center
+        animation: slideInLeft 1.5s ease-out forwards
+        margin-left: 40px
+        padding: 8px 0 8px 16px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        border-left: 2px solid $light-blue
+        background: linear-gradient(90deg, rgba(91, 234, 255, 0.08) 0%, rgba(91, 234, 255, 0.00) 44.71%)
+        position: relative
+        &:before
+          position: absolute
+          content: ""
+          display: block
+          left: -84px
+          top: 50%
+          transform: translateY(-50%)
+          width: 84px
+          height: 77px
+          background: url("../img/coin-ico.png") no-repeat 0 0/cover
+          @media screen and (max-width: 600px)
+            background: url("../img/coin-ico-mob.png") no-repeat 0 0/cover
+      &-top
+        font-family: $font-favbetDisplay
+        font-size: 36px
+        text-transform: uppercase
+        color: $light-blue
+      &-bottom
+        font-family: $font-favbetText-regular
+        color: $white
+        font-size: 18px
+      &-coin
+        position: absolute
+        top: -10px
+        left: 200px
+        width: 146px
+        height: auto
+        animation: floatUpDown 1.9s ease-in-out infinite
+      &-bolt
+        position: absolute
+        top: -40px
+        right: 160px
+        width: 163px
+        height: auto
+        animation: floatUpDown 2.3s ease-in-out infinite
+    &__main
+      width: 954px
+      padding-top: 100px
+      padding-bottom: 166px
+      display: flex
+      justify-content: space-between
+      gap: 40px
+      position: relative
+      &-coin
+        position: absolute
+        bottom: 0
+      &-txt
+        font-family: $font-favbetDisplay
+        font-size: 36px
+        text-transform: uppercase
+        color: $white
+        width: 275px
+        text-align: center
+        span
+          font-family: inherit
+          color: $light-blue
+      &-left
+        position: relative
+        width: 305px
+        display: flex
+        justify-content: center
+        align-items: center
+        &-decor
+          position: absolute
+          height: auto
+          &:nth-child(1)
+            width: 126px
+            top: 0
+            animation: grow 2s step-start infinite
+          &:nth-child(3)
+            width: 326px
+            bottom: -180px
+      &-right
+        width: 305px
+      &-bottom
+        position: absolute
+  .slider
+    position: relative
+    width: 359px
+    height: 400px
+    touch-action: pan-y
+    &__container
+      position: relative
+      width: 100%
+      height: 100%
+      perspective: 1000px
+      background: url("../img/slider/cards-shadow.png") no-repeat 0 0/cover
+      background-size: 96% 98%
+    .card
+      margin-top: 40px
+      position: absolute
+      width: 100%
+      height: 100%
+      display: flex
+      transition: transform 0.6s ease, opacity 0.6s ease
+      opacity: 0
+      z-index: 0
+      &-top
+        left: 80px
+        top: -44px
+        position: absolute
+        width: 90px
+        height: 90px
+        z-index: 3
+      &-body
+        position: absolute
+        top: 0
+        height: 314px
+        width: 250px
+        background: url("../img/slider/card-bg.png") no-repeat 0 0/cover
+        background-size: 100% 100%
+        padding: 0 0 30px 0
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        a
+          position: absolute
+          bottom: 30px
+          min-width: 101px
+        &-txt
+          font-family: $font-favbetDisplay
+          font-size: 36px
+          color: $white
+          text-align: center
+          max-width: 230px
+          span
+            font-family: inherit
+            color: $magenta
+      &:nth-child(1)
+        .card-top
+          background: url("../img/slider/challenges.png") no-repeat 0 0/cover
+          background-size: 100% 100%
+      &:nth-child(2)
+        .card-top
+          background: url("../img/slider/missions.png") no-repeat 0 0/cover
+          background-size: 100% 100%
+      &:nth-child(3)
+        .card-top
+          background: url("../img/slider/wheel.png") no-repeat 0 0/cover
+          background-size: 100% 100%
+      &:nth-child(4)
+        .card-top
+          background: url("../img/slider/favshop.png") no-repeat 0 0/cover
+          background-size: 100% 100%
+      &:nth-child(5)
+        .card-top
+          background: url("../img/slider/predict.png") no-repeat 0 0/cover
+          background-size: 100% 100%
+      &.active
+        opacity: 1
+        z-index: 1
+      &.exit
+        transform: translate(-150px, 150px) rotate(-10deg) scale(0.5)
+        opacity: 0
+        z-index: 0
+    &__arrows
+      width: 100%
+    .arrow
+      position: absolute
+      z-index: 2
+      top: 41%
+      transform: translateY(-50%)
+      width: 35px
+      height: 54px
+      cursor: pointer
+      &:hover,
+      &:active
+        transform: scale(1.1) translateY(-50%)
+      &.prev
+        left: -40px
+        background: url("../img/slider/arrow-l.png") no-repeat 0 0/cover
+      &.next
+        right: 65px
+        background: url("../img/slider/arrow-r.png") no-repeat 0 0/cover
+    &__trackers
+      width: 255px
+      margin-top: -17px
+      display: flex
+      justify-content: space-between
+    .dot
+      z-index: 4
+      width: 51px
+      height: 9px
+      background: url("../img/slider/dot.png") no-repeat 0 0/cover
+      border-radius: 3px
+      transition: background 0.3s
+      cursor: pointer
+      &.active
+        background: url("../img/slider/dot-active.png") no-repeat 0 0/cover
+
+
+
+
+
+
+
+
+
+
+
+@keyframes zigzagDrop
+  0%
+    transform: translate(0, -100px)
+    opacity: 0
+  30%
+    transform: translate(30px, -60px)
+  60%
+    transform: translate(-30px, -20px)
+  100%
+    transform: translate(0, 0)
+    opacity: 1
+
+@keyframes floatUpDown
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-5px)
+  100%
+    transform: translateY(0)
+
+@keyframes slideInLeft
+  0%
+    transform: translateX(-50px)
+    opacity: 0
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes grow
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
