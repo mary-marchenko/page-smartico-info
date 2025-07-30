@@ -10,6 +10,7 @@ body
   overscroll-behavior: none
   -webkit-tap-highlight-color: transparent
   background: $bg-black
+  background: magenta
   img
     max-width: 100%
     height: auto
@@ -40,6 +41,7 @@ body
     font-family: $font-robotoCondensed-bold
     font-size: 14px
     transition: background .3s ease-in-out
+    padding: 0 10px
     &:hover,
     &:active
       background-color: $green-hover
@@ -105,12 +107,11 @@ body
     flex-direction: column
     align-items: center
     justify-content: flex-start
-    background: url("../img/bg-bottom-desk.png") no-repeat -47px 50px/cover
-    background-size: 100% 100%
-      //background-size: auto 680px
+    background: url("../img/bg-bottom-desk.png") no-repeat 0 0/cover
+    background-size: 95% 100%
     @media screen and (max-width: 1050px)
-      background: url("../img/bg-bottom-tab.png") no-repeat 0 0/cover
-    @media screen and (max-width: 600px)
+      background: url("../img/bg-bottom-tab.png") no-repeat 50% 50%/cover
+    @media screen and (max-width: 728px)
       background: url("../img/bg-bottom-mob.png") no-repeat 0 0/cover
     &__title
       width: 100%
@@ -118,9 +119,10 @@ body
       display: flex
       justify-content: center
       &-center
+        height: 75px
         animation: slideInLeft 1.5s ease-out forwards
         margin-left: 40px
-        padding: 8px 0 8px 16px
+        padding: 0 0 8px 16px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -137,7 +139,7 @@ body
           width: 84px
           height: 77px
           background: url("../img/coin-ico.png") no-repeat 0 0/cover
-          @media screen and (max-width: 600px)
+          @media screen and (max-width: 728px)
             background: url("../img/coin-ico-mob.png") no-repeat 0 0/cover
       &-top
         font-family: $font-favbetDisplay
@@ -149,23 +151,25 @@ body
         color: $white
         font-size: 18px
       &-coin
-        position: absolute
-        top: -10px
-        left: 200px
+        //position: absolute
+        //top: -10px
+        //left: 200px
+        margin-top: -13px
         width: 146px
         height: auto
         animation: floatUpDown 1.9s ease-in-out infinite
       &-bolt
-        position: absolute
-        top: -40px
-        right: 160px
+        //position: absolute
+        //top: -40px
+        //right: 160px
+        margin-top: -30px
         width: 163px
         height: auto
         animation: floatUpDown 2.3s ease-in-out infinite
     &__main
       width: 954px
-      padding-top: 100px
-      padding-bottom: 166px
+      padding-top: 15px
+      padding-bottom: 175px
       display: flex
       justify-content: space-between
       gap: 40px
@@ -194,15 +198,31 @@ body
           height: auto
           &:nth-child(1)
             width: 126px
-            top: 0
+            top: 24px
             animation: grow 2s step-start infinite
           &:nth-child(3)
             width: 326px
-            bottom: -180px
+            bottom: -100px
       &-right
         width: 305px
       &-bottom
         position: absolute
+        bottom: 0
+      &-coin
+        animation: floatUpDown 1.9s ease-in-out infinite
+        height: auto
+        &:nth-child(1)
+          width: 60px
+          bottom: 80px
+          left: -40px
+        &:nth-child(2)
+          width: 80px
+          bottom: 50px
+          left: 210px
+        &:nth-child(3)
+          width: 100px
+          bottom: 140px
+          right: -1045px
   .slider
     position: relative
     width: 359px
@@ -210,11 +230,11 @@ body
     touch-action: pan-y
     &__container
       position: relative
-      width: 100%
-      height: 100%
+      width: 88%
+      height: 104%
       perspective: 1000px
-      background: url("../img/slider/cards-shadow.png") no-repeat 0 0/cover
-      background-size: 96% 98%
+      background: url("../img/slider/cards-shadow.png") no-repeat -8px -11px/cover
+      background-size: 100% 100%
     .card
       margin-top: 40px
       position: absolute
@@ -304,7 +324,7 @@ body
         background: url("../img/slider/arrow-r.png") no-repeat 0 0/cover
     &__trackers
       width: 255px
-      margin-top: -17px
+      margin-top: -27px
       display: flex
       justify-content: space-between
     .dot

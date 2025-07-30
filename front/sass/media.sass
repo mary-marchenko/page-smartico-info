@@ -1,1 +1,361 @@
 @import "var"
+
+.fav-page
+
+  @media screen and (max-width: 1366px)
+    .cont
+      width: 100%
+    .welcome
+      background-position: 50% 50%
+      background-size: auto 100%
+      &__sem
+        right: inherit
+        left: 56%
+    .widget
+      width: 705px
+    .info
+      background-position: 50% 50%
+      background-size: 1366px auto
+      &__title
+        &-coin
+          left: 10%
+
+  @media screen and (max-width: 1150px)
+    .info
+      background-position: 95% 50%
+      &__main
+        width: 800px
+        &-coin
+          &:nth-child(3)
+            bottom: 98px
+            right: -829px
+
+  @media screen and (max-width: 1050px)
+    .welcome
+      background-size: 100% auto
+      &__title
+        width: 200px
+        text-align: center
+        line-height: 37px
+        margin-bottom: 30px
+    .info
+      background-size: 1050px 100%
+      background-position: 50% 20px
+      &__title
+        &-center
+          width: 521px
+          height: 93px
+          padding-top: 2px
+        &-top
+          font-size: 30px
+        &-bolt
+          position: absolute
+          left: 81%
+      &__main
+        width: 723px
+        &-coin
+          &:nth-child(1)
+            left: 20px
+          &:nth-child(3)
+            right: -780px
+
+  @media screen and (max-width: 988px)
+    .info
+      &__title
+        &-bolt
+          left: inherit
+          right: -10px
+
+  @media screen and (max-width: 940px)
+    gap: 58px
+    .info
+      background-size: 920px 85%
+      background-position: 50% 89px
+      &__title
+        margin-bottom: 60px
+        &-bolt
+          width: 130px
+          right: 120px
+          top: 100px
+        &-center
+          margin-left: 33px
+          &:before
+            top: 40%
+      &__main
+        &-left
+          &-decor
+            &:nth-child(3)
+              right: -80px
+
+  @media screen and (max-width: 890px)
+    .info
+      background-size: 890px 85%
+      background-position: 50% 89px
+
+  @media screen and (max-width: 830px)
+    .info
+      background-size: 830px 85%
+      background-position: 50% 89px
+      &__main
+        width: 680px
+
+  @media screen and (max-width: 775px)
+    .info
+      &__main
+        width: 660px
+
+  @media screen and (max-width: 728px)
+    gap: 45px
+    .welcome
+      background-position: 50% 0
+      &__sem
+        left: 53%
+        width: 450px
+    .widget
+      width: 100%
+      p
+        max-width: 90%
+    .info
+      background-size: 100% 100%
+      background-position: 50% 173px
+      &__title
+        margin-bottom: 0
+        &-bolt
+          //right: 8px
+          right: inherit
+          left: 590px
+        &-center
+          width: 485px
+          margin-left: 5px
+          &:before
+            top: 30%
+            width: 49px
+            height: 46px
+            left: -51px
+      &__main
+        flex-direction: column
+        align-items: center
+        padding-bottom: 80px
+        &-left
+          width: 400px
+          justify-content: flex-start
+          &-decor
+            &:nth-child(1)
+              right: -40px
+              top: 4px
+            &:nth-child(3)
+              right: inherit
+              width: 200px
+              left: -124px
+              bottom: -180px
+        &-coin
+          &:nth-child(1)
+            bottom: 10px
+          &:nth-child(2)
+            left: 150px
+
+  @media screen and (max-width: 660px)
+    .welcome
+      height: 310px
+      &__sem
+        width: 420px
+    .info
+      &__title
+        &-bolt
+          left: 550px
+
+  @media screen and (max-width: 620px)
+    .info
+      &__title
+        &-center
+          width: 370px
+          height: 138px
+
+  @media screen and (max-width: 600px)
+    .cont
+      width: 375px
+    .welcome
+      width: 100%
+      align-items: flex-start
+      &__content
+        margin-left: 35px
+        align-items: flex-start
+      &__title
+        font-size: 30px
+        margin-bottom: 23px
+        //font-size: 24px
+        //margin-bottom: 18px
+        white-space: nowrap
+      &__sem
+        left: inherit
+        right: -60px
+    .widget
+      width: 370px
+      height: 102px
+      padding-top: 20px
+      margin-top: -30px
+      p
+        max-width: 87%
+    .info
+      width: 100%
+      background-size: 100% 86%
+      &__title
+        &-top
+          font-size: 18px
+          line-height: 18px
+        &-coin
+          width: 84px
+          margin-top: 5px
+        &-center
+          margin-left: 20px
+          width: 258px
+          padding: 5px 0 5px 13px
+          &:before
+            top: 15%
+        &-bolt
+          left: inherit
+          right: 30px
+          top: -50px
+          width: 100px
+      &__main
+        padding-top: 40px
+        &-left
+          width: 375px
+          &-decor
+            &:nth-child(1)
+              right: 4px
+              top: -7px
+              width: 110px
+            &:nth-child(3)
+              width: 100px
+              left: 0
+              bottom: -120px
+        &-txt
+          font-size: 28px
+          line-height: 30px
+          width: 220px
+        &-coin
+          &:nth-child(2),
+          &:nth-child(1)
+            display: none
+          &:nth-child(3)
+            width: 79px
+            right: -170px
+            bottom: 20px
+    .slider
+      width: 375px
+      &__container
+        background-position: 100% 0
+        width: 89%
+        background-size: 95% 98%
+      .card
+        //justify-content: center
+        &-top
+          left: 105px
+        padding-left: 25px
+        &-body
+          background-position: 0 50%
+      .arrow
+        &.prev
+          left: -27px
+        &.next
+          right: 50px
+      &__trackers
+        margin-top: -35px
+        margin-left: 20px
+
+  @media screen and (max-width: 524px)
+    .welcome
+      height: 240px
+      background-size: 100% 100%
+      &__sem
+        width: 350px
+      &__title
+        text-align: left
+        font-size: 24px
+        margin-bottom: 18px
+
+  @media screen and (max-width: 480px)
+    .info
+      background-position: 50% 197px
+      &__title
+        &-bolt
+          right: 0
+
+  @media screen and (max-width: 429px)
+    .welcome
+      height: 196px
+      &__sem
+        right: -73px
+        width: 296px
+      &__title
+        margin-bottom: 11px
+
+  @media screen and (max-width: 406px)
+    .info
+      &__title
+        &-bolt
+          right: -16px
+          top: -41px
+      &__main
+        &-left
+          width: 352px
+
+  @media screen and (max-width: 374px)
+    .welcome
+      &__content
+        margin-left: 25px
+    .widget
+      width: 100%
+      background-size: 100% 100%
+      padding-top: 22px
+      p
+        max-width: 85%
+    .info
+      &__title
+        &-bolt
+          width: 90px
+          right: -19px
+          top: -22px
+      &__main
+        width: 100%
+        &-left
+          margin-left: 6px
+          width: 100%
+          &-decor
+            &:nth-child(1)
+              width: 95px
+              top: 0
+              right: 15px
+    .slider
+      transform: scale(0.9)
+      transform-origin: center
+
+  @media screen and (max-width: 355px)
+    .welcome
+      &__sem
+        right: -78px
+    .info
+      &__title
+        &-bolt
+          width: 80px
+          right: -19px
+          top: 13px
+
+  @media screen and (max-width: 340px)
+    .welcome
+      &__title
+        font-size: 22px
+    .info
+      &__title
+        &-bolt
+          display: none
+      &__main
+        &-txt
+          font-size: 26px
+          width: 200px
+    .slider
+      transform: scale(0.85)
+      transform-origin: center
+
+
